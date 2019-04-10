@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hui&#39;s Life</title>
+  
+  <subtitle>心动不如行动，行动不如马上心动</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://shenweihui.cn/"/>
+  <updated>2019-04-10T09:03:02.984Z</updated>
+  <id>http://shenweihui.cn/</id>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Welcome</title>
+    <link href="http://shenweihui.cn/2019/04/08/welcome/"/>
+    <id>http://shenweihui.cn/2019/04/08/welcome/</id>
+    <published>2019-04-08T07:44:30.000Z</published>
+    <updated>2019-04-10T09:03:02.984Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="欢迎来到-Sandy的家！"><a href="#欢迎来到-Sandy的家！" class="headerlink" title="欢迎来到 Sandy的家！"></a>欢迎来到 Sandy的家！</h2><p>The site is created by Max with love!</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;欢迎来到-Sandy的家！&quot;&gt;&lt;a href=&quot;#欢迎来到-Sandy的家！&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到 Sandy的家！&quot;&gt;&lt;/a&gt;欢迎来到 Sandy的家！&lt;/h2&gt;&lt;p&gt;The site is created by Max
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://shenweihui.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
