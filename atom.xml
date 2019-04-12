@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hui&#39;s Life</title>
+  <title>M&amp;S Life</title>
   
   <subtitle>心动不如行动，行动不如马上心动</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shenweihui.cn/"/>
-  <updated>2019-04-10T09:03:02.984Z</updated>
+  <updated>2019-04-12T08:25:05.811Z</updated>
   <id>http://shenweihui.cn/</id>
+  
+  <author>
+    <name>M&amp;S</name>
+    
+  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Welcome</title>
+    <title>💗欢迎访问M&amp;S💗</title>
     <link href="http://shenweihui.cn/2019/04/08/welcome/"/>
     <id>http://shenweihui.cn/2019/04/08/welcome/</id>
     <published>2019-04-08T07:44:30.000Z</published>
-    <updated>2019-04-10T09:03:02.984Z</updated>
+    <updated>2019-04-12T08:25:05.811Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="欢迎来到-Sandy的家！"><a href="#欢迎来到-Sandy的家！" class="headerlink" title="欢迎来到 Sandy的家！"></a>欢迎来到 Sandy的家！</h2><p>The site is created by Max with love!</p>]]></content>
+    <content type="html"><![CDATA[<p>亲，欢迎访问M&amp;S的Blog！</p><p>这里将会记录我们生活的点滴，欢迎评论！</p><p>The site is created by Max with 💗!</p><p><img src="https://ws1.sinaimg.cn/large/6dec2b67ly1g1yqyva9wkj21y013dtg6.jpg" alt="Img"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;欢迎来到-Sandy的家！&quot;&gt;&lt;a href=&quot;#欢迎来到-Sandy的家！&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到 Sandy的家！&quot;&gt;&lt;/a&gt;欢迎来到 Sandy的家！&lt;/h2&gt;&lt;p&gt;The site is created by Max
+        &lt;p&gt;亲，欢迎访问M&amp;amp;S的Blog！&lt;/p&gt;
+&lt;p&gt;这里将会记录我们生活的点滴，欢迎评论！&lt;/p&gt;
+&lt;p&gt;The site is created by Max with 💗!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/6
       
     
     </summary>
     
+      <category term="随笔" scheme="http://shenweihui.cn/categories/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="随笔" scheme="http://shenweihui.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="gossip" scheme="http://shenweihui.cn/tags/gossip/"/>
+    
+      <category term="life" scheme="http://shenweihui.cn/tags/life/"/>
     
   </entry>
   
