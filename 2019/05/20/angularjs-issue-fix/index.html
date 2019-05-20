@@ -45,7 +45,7 @@
     
     <title>
         
-            归档: 2019 | 
+            Angularjs 填坑记 0520 | 
         
         M&amp;S Life
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content>
+    <meta name="keywords" content=",AngularJs,技术坑">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -241,7 +241,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="M&amp;S Life">
-    <meta name="msapplication-starturl" content="http://shenweihui.cn/archives/2019/">
+    <meta name="msapplication-starturl" content="http://shenweihui.cn/2019/05/20/angularjs-issue-fix/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="M&amp;S Life">
@@ -260,13 +260,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://shenweihui.cn/archives/2019/">
+    <meta property="og:url" content="http://shenweihui.cn/2019/05/20/angularjs-issue-fix/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2019 | M&amp;S Life">
+    <meta property="og:title" content="Angularjs 填坑记 0520 | M&amp;S Life">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    
+    <meta property="og:article:tag" content="AngularJs"> <meta property="og:article:tag" content="技术坑"> 
 
+    
+        <meta property="article:published_time" content="Mon May 20 2019 16:38:57 GMT+0800">
+        <meta property="article:modified_time" content="Mon May 20 2019 16:48:14 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,13 +277,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://shenweihui.cn/archives/2019/index.html">
+        <link rel="canonical" href="http://shenweihui.cn/2019/05/20/angularjs-issue-fix/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://shenweihui.cn/2019/05/20/angularjs-issue-fix/index.html",
+    "headline": "Angularjs 填坑记 0520",
+    "datePublished": "Mon May 20 2019 16:38:57 GMT+0800",
+    "dateModified": "Mon May 20 2019 16:48:14 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "M&amp;S",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi~ R U OK?"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "M&amp;S Life",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",AngularJs,技术坑",
+    "description": "",
+}
+</script>
 
 
     
@@ -314,222 +347,251 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    
+    <script src="https://cdn.bootcss.com/crypto-js/3.1.9/crypto-js.min.js"></script>
+    <script>
+        (function() {
+            let pwd = '';
+            if (pwd && pwd.length > 0) {
+                if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                    alert('密码错误，将返回主页！');
+                    location.href = '/';
+                }
+            }
+        })();
+    </script>
 
-    <!-- Pin on top -->
+
+<!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#AngularJS-填坑记-1-Factory-method-call-issue"><span class="post-toc-number">1.</span> <span class="post-toc-text">AngularJS 填坑记 - 1 - Factory method call issue</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Controller-调用部分"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">Controller 调用部分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#factory方法代码片段"><span class="post-toc-number">1.0.0.2.</span> <span class="post-toc-text">factory方法代码片段</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/05/20/angularjs-issue-fix/">Angularjs 填坑记 0520</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            AngularJS 填坑记 - 1 - Factory method call issue在将老项目进行局部SPA化的过程中试图抽离数据访问的过程中莫名遇...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/05/20/angularjs-issue-fix/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="M&amp;S's avatar">
-            </div>
-            <div>
-                <strong>M&amp;S</strong>
-                <span>5月 20, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/IT技术相关/">IT技术相关</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/04/18/the-place-of-first-love/">张信哲-《初恋的地方》</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            最近偶然间在广播里听到哲哲的一首新歌，说新歌只是对自己而言的，毕竟是第一次听到，感觉很柔美，符合当下自己的品味。于是进入老套路：搜歌-&gt;单曲循环-&...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/04/18/the-place-of-first-love/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="M&amp;S's avatar">
-            </div>
-            <div>
-                <strong>M&amp;S</strong>
-                <span>4月 18, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/随笔/">随笔</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/04/08/welcome/">💗欢迎访问M&amp;S💗</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            亲，欢迎访问M&amp;S的Blog！这里将会记录我们生活的点滴，欢迎评论！The site is created by Max with 💗!
-
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/04/08/welcome/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="M&amp;S's avatar">
-            </div>
-            <div>
-                <strong>M&amp;S</strong>
-                <span>4月 08, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/随笔/">随笔</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Angularjs 填坑记 0520
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>M&amp;S</strong>
+        <span>5月 20, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/AngularJs/">AngularJs</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/技术坑/">技术坑</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Angularjs 填坑记 0520&url=http://shenweihui.cn/2019/05/20/angularjs-issue-fix/index.html&pic=http://shenweihui.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="AngularJS-填坑记-1-Factory-method-call-issue"><a href="#AngularJS-填坑记-1-Factory-method-call-issue" class="headerlink" title="AngularJS 填坑记 - 1 - Factory method call issue"></a>AngularJS 填坑记 - 1 - Factory method call issue</h1><p>在将老项目进行局部SPA化的过程中试图抽离数据访问的过程中莫名遇到个诡异的问题，页面最底部实现了滚动加载，但转成每次用抽离的服务方法进行调用时却返回的response中始终时第一页的数据，经过查询与测试解决，特此纪念。</p>
+<h4 id="Controller-调用部分"><a href="#Controller-调用部分" class="headerlink" title="Controller 调用部分"></a>Controller 调用部分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">angular.controller(&apos;MainController&apos;, function ($scope, $http, $q, htcDataService) &#123;</span><br><span class="line">	........</span><br><span class="line">    //Methods</span><br><span class="line">    $scope.getProducts = function (append, isFromSearch) &#123;</span><br><span class="line">        $.showLoading();</span><br><span class="line">        $scope.isLoading = true;</span><br><span class="line">        htcDataService.getProducts($scope.qs.page, $scope.qs.keyword)</span><br><span class="line">            .then(function (response) &#123;</span><br><span class="line">                $.hideLoading();</span><br><span class="line">                if (response &amp;&amp; response.data &amp;&amp; response.data.length &gt; 0) &#123;</span><br><span class="line">                    //console.log(&apos;htcDataService.getProducts - &apos; + response.data.length);</span><br><span class="line">                    if (append) &#123;</span><br><span class="line">                        for (var i = 0; i &lt; response.data.length; i++) &#123;</span><br><span class="line">                            $scope.products.push(response.data[i]);//此处response始终返回第一次成功的第一页数据？？</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        $scope.products = [];</span><br><span class="line">                        _.forEach(response.data, function (item) &#123;</span><br><span class="line">                            $scope.products.push(item);</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                    //No need to load more</span><br><span class="line">                    if (isFromSearch || response.data.length == 0) &#123;</span><br><span class="line">                        $scope.infiniteOff();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    //No data found</span><br><span class="line">                    $scope.infiniteOff();</span><br><span class="line">                &#125;</span><br><span class="line">                $scope.searchHintMsg = isFromSearch ? &quot;(搜索到&quot; + response.data.length + &quot;条结果)&quot; : &quot;&quot;;</span><br><span class="line">                $scope.isLoading = false;</span><br><span class="line">            &#125;, function (response) &#123;</span><br><span class="line">                $.hideLoading();</span><br><span class="line">                // error  </span><br><span class="line">                console.log(response);</span><br><span class="line">                $.toast(&quot;加载失败&quot;, &quot;forbidden&quot;);</span><br><span class="line">                $scope.searchHintMsg = &quot;&quot;;</span><br><span class="line">                $scope.isLoading = false;</span><br><span class="line">            &#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="factory方法代码片段"><a href="#factory方法代码片段" class="headerlink" title="factory方法代码片段"></a>factory方法代码片段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">angular.factory(&apos;htcDataService&apos;, function ($http, $q) &#123;</span><br><span class="line">    var apiRoot = &apos;/api/resource&apos;;</span><br><span class="line">    //var deferred = $q.defer();//放在此处会有问题，每次都是取的同一数据</span><br><span class="line"></span><br><span class="line">    var service = &#123;    // our factory definition</span><br><span class="line">        user: &#123;&#125;,</span><br><span class="line">        getProducts: function (page, keyword) &#123;</span><br><span class="line">            var qs = &quot;?page=&quot; + page + &quot;&amp;keyword=&quot; + keyword;</span><br><span class="line">            var deferred = $q.defer();</span><br><span class="line">            $http(&#123;</span><br><span class="line">                method: &apos;get&apos;,</span><br><span class="line">                url: apiRoot + &apos;/product&apos; + qs</span><br><span class="line">            &#125;).then(function (data) &#123;</span><br><span class="line">                deferred.resolve(data);</span><br><span class="line">            &#125;, function (data) &#123;</span><br><span class="line">                deferred.reject(data);</span><br><span class="line">            &#125;);</span><br><span class="line">            return deferred.promise;</span><br><span class="line">        &#125;,</span><br><span class="line">		.......</span><br><span class="line">    &#125;;</span><br><span class="line">    return service;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>经过多次测试，发现对于<code>var deferred = $q.defer();</code>的定义还是需要放在方法体内，放在外部会有问题。<br>PS，又是一年520，今天的成就是在蚂蚁森林抢了一块保护地😀</p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0 中国大陆</a> 协议许可
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://shenweihui.cn/2019/05/20/angularjs-issue-fix/">http://shenweihui.cn/2019/05/20/angularjs-issue-fix/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style="padding:10px;" class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'true' == true;
+    var verify = 'true' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "XYsoMszW0yGKMwVXcQn2Od9N-gzGzoHsz",
+        appKey: "EUdSlnTHPtQVNKjrkSmRWf8S",
+        placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'zh-cn'
+    });
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/04/18/the-place-of-first-love/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

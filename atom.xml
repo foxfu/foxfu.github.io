@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shenweihui.cn/"/>
-  <updated>2019-04-18T07:10:32.041Z</updated>
+  <updated>2019-05-20T08:48:14.075Z</updated>
   <id>http://shenweihui.cn/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Angularjs 填坑记 0520</title>
+    <link href="http://shenweihui.cn/2019/05/20/angularjs-issue-fix/"/>
+    <id>http://shenweihui.cn/2019/05/20/angularjs-issue-fix/</id>
+    <published>2019-05-20T08:38:57.000Z</published>
+    <updated>2019-05-20T08:48:14.075Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="AngularJS-填坑记-1-Factory-method-call-issue"><a href="#AngularJS-填坑记-1-Factory-method-call-issue" class="headerlink" title="AngularJS 填坑记 - 1 - Factory method call issue"></a>AngularJS 填坑记 - 1 - Factory method call issue</h1><p>在将老项目进行局部SPA化的过程中试图抽离数据访问的过程中莫名遇到个诡异的问题，页面最底部实现了滚动加载，但转成每次用抽离的服务方法进行调用时却返回的response中始终时第一页的数据，经过查询与测试解决，特此纪念。</p><h4 id="Controller-调用部分"><a href="#Controller-调用部分" class="headerlink" title="Controller 调用部分"></a>Controller 调用部分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">angular.controller(&apos;MainController&apos;, function ($scope, $http, $q, htcDataService) &#123;</span><br><span class="line">........</span><br><span class="line">    //Methods</span><br><span class="line">    $scope.getProducts = function (append, isFromSearch) &#123;</span><br><span class="line">        $.showLoading();</span><br><span class="line">        $scope.isLoading = true;</span><br><span class="line">        htcDataService.getProducts($scope.qs.page, $scope.qs.keyword)</span><br><span class="line">            .then(function (response) &#123;</span><br><span class="line">                $.hideLoading();</span><br><span class="line">                if (response &amp;&amp; response.data &amp;&amp; response.data.length &gt; 0) &#123;</span><br><span class="line">                    //console.log(&apos;htcDataService.getProducts - &apos; + response.data.length);</span><br><span class="line">                    if (append) &#123;</span><br><span class="line">                        for (var i = 0; i &lt; response.data.length; i++) &#123;</span><br><span class="line">                            $scope.products.push(response.data[i]);//此处response始终返回第一次成功的第一页数据？？</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        $scope.products = [];</span><br><span class="line">                        _.forEach(response.data, function (item) &#123;</span><br><span class="line">                            $scope.products.push(item);</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                    //No need to load more</span><br><span class="line">                    if (isFromSearch || response.data.length == 0) &#123;</span><br><span class="line">                        $scope.infiniteOff();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    //No data found</span><br><span class="line">                    $scope.infiniteOff();</span><br><span class="line">                &#125;</span><br><span class="line">                $scope.searchHintMsg = isFromSearch ? &quot;(搜索到&quot; + response.data.length + &quot;条结果)&quot; : &quot;&quot;;</span><br><span class="line">                $scope.isLoading = false;</span><br><span class="line">            &#125;, function (response) &#123;</span><br><span class="line">                $.hideLoading();</span><br><span class="line">                // error  </span><br><span class="line">                console.log(response);</span><br><span class="line">                $.toast(&quot;加载失败&quot;, &quot;forbidden&quot;);</span><br><span class="line">                $scope.searchHintMsg = &quot;&quot;;</span><br><span class="line">                $scope.isLoading = false;</span><br><span class="line">            &#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h4 id="factory方法代码片段"><a href="#factory方法代码片段" class="headerlink" title="factory方法代码片段"></a>factory方法代码片段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">angular.factory(&apos;htcDataService&apos;, function ($http, $q) &#123;</span><br><span class="line">    var apiRoot = &apos;/api/resource&apos;;</span><br><span class="line">    //var deferred = $q.defer();//放在此处会有问题，每次都是取的同一数据</span><br><span class="line"></span><br><span class="line">    var service = &#123;    // our factory definition</span><br><span class="line">        user: &#123;&#125;,</span><br><span class="line">        getProducts: function (page, keyword) &#123;</span><br><span class="line">            var qs = &quot;?page=&quot; + page + &quot;&amp;keyword=&quot; + keyword;</span><br><span class="line">            var deferred = $q.defer();</span><br><span class="line">            $http(&#123;</span><br><span class="line">                method: &apos;get&apos;,</span><br><span class="line">                url: apiRoot + &apos;/product&apos; + qs</span><br><span class="line">            &#125;).then(function (data) &#123;</span><br><span class="line">                deferred.resolve(data);</span><br><span class="line">            &#125;, function (data) &#123;</span><br><span class="line">                deferred.reject(data);</span><br><span class="line">            &#125;);</span><br><span class="line">            return deferred.promise;</span><br><span class="line">        &#125;,</span><br><span class="line">.......</span><br><span class="line">    &#125;;</span><br><span class="line">    return service;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>经过多次测试，发现对于<code>var deferred = $q.defer();</code>的定义还是需要放在方法体内，放在外部会有问题。<br>PS，又是一年520，今天的成就是在蚂蚁森林抢了一块保护地😀</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="IT技术相关" scheme="http://shenweihui.cn/categories/IT%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="AngularJs" scheme="http://shenweihui.cn/tags/AngularJs/"/>
+    
+      <category term="技术坑" scheme="http://shenweihui.cn/tags/%E6%8A%80%E6%9C%AF%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>张信哲-《初恋的地方》</title>
     <link href="http://shenweihui.cn/2019/04/18/the-place-of-first-love/"/>
     <id>http://shenweihui.cn/2019/04/18/the-place-of-first-love/</id>
     <published>2019-04-18T04:48:53.000Z</published>
     <updated>2019-04-18T07:10:32.041Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>最近偶然间在广播里听到哲哲的一首新歌，说新歌只是对自己而言的，毕竟是第一次听到，感觉很柔美，符合当下自己的品味。<br>于是进入老套路：<strong>搜歌-&gt;单曲循环-&gt;搜谱</strong><br>但貌似不是某人的菜，还说我老人了，可不是么，确实是跟哲哲一样老年人了 😹<br>Anyway I like it. 顺带把邓丽君的原版以及王菲的版本也都欣赏了一遍，感觉还是各有特色。</p>    <div id="aplayer-EsKjqPYc" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="562592169" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>最近偶然间在广播里听到哲哲的一首新歌，说新歌只是对自己而言的，毕竟是第一次听到，感觉很柔美，符合当下自己的品味。<br>于是进入老套路：<strong>搜歌-&gt;单曲循环-&gt;搜谱</strong><br>但貌似不是某人的菜，还说我老人了，可不是么，确实是跟哲哲一样老年人了 😹<br>Anyway I like it. 顺带把邓丽君的原版以及王菲的版本也都欣赏了一遍，感觉还是各有特色。</p>    <div id="aplayer-SDsCCrSj" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="562592169" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>]]></content>
     
     <summary type="html">
     
@@ -64,9 +91,9 @@
       <category term="随笔" scheme="http://shenweihui.cn/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="life" scheme="http://shenweihui.cn/tags/life/"/>
-    
       <category term="gossip" scheme="http://shenweihui.cn/tags/gossip/"/>
+    
+      <category term="life" scheme="http://shenweihui.cn/tags/life/"/>
     
   </entry>
   
