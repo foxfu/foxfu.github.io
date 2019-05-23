@@ -45,7 +45,7 @@
     
     <title>
         
-            归档: 2019/5 | 
+            Angularjs ngRoute 小试牛刀 | 
         
         M&amp;S Life
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content>
+    <meta name="keywords" content=",AngularJs">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -241,7 +241,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="M&amp;S Life">
-    <meta name="msapplication-starturl" content="http://shenweihui.cn/archives/2019/05/">
+    <meta name="msapplication-starturl" content="http://shenweihui.cn/2019/05/23/angularjs-route/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="M&amp;S Life">
@@ -260,13 +260,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://shenweihui.cn/archives/2019/05/">
+    <meta property="og:url" content="http://shenweihui.cn/2019/05/23/angularjs-route/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2019/5 | M&amp;S Life">
+    <meta property="og:title" content="Angularjs ngRoute 小试牛刀 | M&amp;S Life">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    
+    <meta property="og:article:tag" content="AngularJs"> 
 
+    
+        <meta property="article:published_time" content="Thu May 23 2019 16:14:18 GMT+0800">
+        <meta property="article:modified_time" content="Thu May 23 2019 16:35:31 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,13 +277,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://shenweihui.cn/archives/2019/05/index.html">
+        <link rel="canonical" href="http://shenweihui.cn/2019/05/23/angularjs-route/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://shenweihui.cn/2019/05/23/angularjs-route/index.html",
+    "headline": "Angularjs ngRoute 小试牛刀",
+    "datePublished": "Thu May 23 2019 16:14:18 GMT+0800",
+    "dateModified": "Thu May 23 2019 16:35:31 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "M&amp;S",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi~ R U OK?"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "M&amp;S Life",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",AngularJs",
+    "description": "",
+}
+</script>
 
 
     
@@ -314,220 +347,249 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    
+    <script src="https://cdn.bootcss.com/crypto-js/3.1.9/crypto-js.min.js"></script>
+    <script>
+        (function() {
+            let pwd = '';
+            if (pwd && pwd.length > 0) {
+                if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                    alert('密码错误，将返回主页！');
+                    location.href = '/';
+                }
+            }
+        })();
+    </script>
 
-    <!-- Pin on top -->
+
+<!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/05/23/angularjs-route/">Angularjs ngRoute 小试牛刀</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            HTC的业务逻辑页面虽然不是很多，但SPA中的路由是不可避免地要小小学习一下，正好在设计评论页面时想借这机会和明细页面一起用AngularJs自带的ngR...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/05/23/angularjs-route/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="M&amp;S's avatar">
-            </div>
-            <div>
-                <strong>M&amp;S</strong>
-                <span>5月 23, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/IT技术相关/">IT技术相关</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/05/20/angularjs-issue-fix/">Angularjs 填坑记 0520</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            AngularJS 填坑记 - 1 - Factory method call issue在将老项目进行局部SPA化的过程中试图抽离数据访问的过程中莫名遇...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/05/20/angularjs-issue-fix/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="M&amp;S's avatar">
-            </div>
-            <div>
-                <strong>M&amp;S</strong>
-                <span>5月 20, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/IT技术相关/">IT技术相关</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/05/20/angularjs-directive-htc-star/">Angularjs directive 仿大众点评评分</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            HTC的现有AngularJS+Asp.net MVC的杂乱架构已经无力吐槽了，在我看来最佳重构的方式就是重新写一套新的😂但既然领导层那么佛性，我也就慢...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/05/20/angularjs-directive-htc-star/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="M&amp;S's avatar">
-            </div>
-            <div>
-                <strong>M&amp;S</strong>
-                <span>5月 20, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/IT技术相关/">IT技术相关</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Angularjs ngRoute 小试牛刀
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>M&amp;S</strong>
+        <span>5月 23, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/AngularJs/">AngularJs</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Angularjs ngRoute 小试牛刀&url=http://shenweihui.cn/2019/05/23/angularjs-route/index.html&pic=http://shenweihui.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>HTC的业务逻辑页面虽然不是很多，但SPA中的路由是不可避免地要小小学习一下，正好在设计评论页面时想借这机会和明细页面一起用AngularJs自带的ngRoute来根据不同路由加载不同template的目的。<br>我最初所设想的路由很简单：</p>
+<ul>
+<li>产品列表 “/list”</li>
+<li>产品明细 “/{pid}”</li>
+<li>产品评论 “/{pid}/comment”</li>
+</ul>
+<p>但随后想想后续有上传等其他路由需求，因而决定稍微灵活一点（最好引入正则，但短期并不需要故先搁下），查了下资料并做尝试，最终的大概代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">angular.config([&apos;$routeProvider&apos;,</span><br><span class="line">            function config($routeProvider) &#123;</span><br><span class="line">                $routeProvider.</span><br><span class="line">                    when(&apos;/list&apos;, &#123;</span><br><span class="line">                        template: &apos;&lt;product-list&gt;&lt;/product-list&gt;&apos;</span><br><span class="line">                    &#125;).</span><br><span class="line">                    when(&apos;/:productId/:operation?&apos;, &#123;</span><br><span class="line">                        template: getProductOperationTemplate</span><br><span class="line">                    &#125;).</span><br><span class="line">                    otherwise(&apos;/list&apos;);</span><br><span class="line">            &#125;</span><br><span class="line">        ])</span><br></pre></td></tr></table></figure></p>
+<p>其中用一个全局的方法来根据路由参数选择不同template</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function getProductOperationTemplate(data) &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">    if (!data.operation) data.operation = &apos;detail&apos;;//default</span><br><span class="line">    switch (data.operation) &#123;</span><br><span class="line">        case &apos;upload&apos;:</span><br><span class="line">            return &apos;&lt;user-upload&gt;&lt;/user-upload&gt;&apos;;</span><br><span class="line">            break;</span><br><span class="line">        case &apos;comment&apos;:</span><br><span class="line">            return &apos;&lt;user-comment&gt;&lt;/user-comment&gt;&apos;;</span><br><span class="line">            break;</span><br><span class="line">        case &apos;detail&apos;:</span><br><span class="line">            return &apos;&lt;product-detail&gt;&lt;/product-detail&gt;&apos;;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            return &apos;&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    //return &apos;&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在controller部分可以使用<strong>$route.updateParams({ operation: ‘comment’ }); 或 $location.path($scope.productId + ‘/comment’);</strong>来动态更新路由。<br>若需要更灵活地管理路由，根据网上的说法可以监听相关事件触发时进行路由跳转，这样可以用正则匹配等进行控制，考虑目前还不需要因而也未进行相关尝试。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">angular.config()</span><br><span class="line">.run([&apos;$rootScope&apos;,&apos;$location&apos;,function($rootScope,$location)&#123;</span><br><span class="line">    $rootScope.$on(&apos;$locationChangeStart&apos;,function(event,next,current)&#123;</span><br><span class="line">        //......</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;]);</span><br></pre></td></tr></table></figure></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0 中国大陆</a> 协议许可
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://shenweihui.cn/2019/05/23/angularjs-route/">http://shenweihui.cn/2019/05/23/angularjs-route/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style="padding:10px;" class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'true' == true;
+    var verify = 'true' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "XYsoMszW0yGKMwVXcQn2Od9N-gzGzoHsz",
+        appKey: "EUdSlnTHPtQVNKjrkSmRWf8S",
+        placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'zh-cn'
+    });
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/05/20/angularjs-issue-fix/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
