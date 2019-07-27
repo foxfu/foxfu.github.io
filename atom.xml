@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shenweihui.cn/"/>
-  <updated>2019-06-12T07:23:25.170Z</updated>
+  <updated>2019-07-27T01:51:23.570Z</updated>
   <id>http://shenweihui.cn/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于起名</title>
+    <link href="http://shenweihui.cn/2019/07/26/name-creation/"/>
+    <id>http://shenweihui.cn/2019/07/26/name-creation/</id>
+    <published>2019-07-26T09:51:19.000Z</published>
+    <updated>2019-07-27T01:51:23.570Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>话说起名字真是件让人头疼的事情，不管是中文名还是英文名。这事儿说小也不小，但只怪自己文学底蕴太差，所以最好还是要借助一下各类起名软件了。<br>好在“小千千”也是顺利地跟这个世界say hello了，为什么我先想到的是下一步是不是该把各类账号给抢注了呢，肯定是职业习惯！<br>话说想到的第一个谐音英文名“Cherry”被皇后无情地拒绝了😂</p><p><img src="https://ws1.sinaimg.cn/mw690/6dec2b67gy1g5e5oqst62j24802tc4qq.jpg" alt></p><blockquote><p>“Hello World”</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://shenweihui.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="life" scheme="http://shenweihui.cn/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>兑换码生成算法相关</title>
     <link href="http://shenweihui.cn/2019/06/12/coupon-code-algorithm/"/>
     <id>http://shenweihui.cn/2019/06/12/coupon-code-algorithm/</id>
     <published>2019-06-12T07:06:12.000Z</published>
-    <updated>2019-06-12T07:23:25.170Z</updated>
+    <updated>2019-06-12T07:31:44.476Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>产品业务上最近有新人礼相关的需求，其中为了和公众号交互上的考虑需要使用类似团购“兑换码”的机制，于是在开发过程中就牵涉到如何生成大量随机且不唯一的兑换码的问题，同时还要考虑兑换码的验证等问题，虽然性能上暂时不需要考虑太多，毕竟小作坊注册的人不会很多，时间也紧迫，但兑换码的生成算法深入研究一下确实很有意思，比如今天看到有人说美团用到的<strong>“线性同余产生随机数”</strong>的算法，有时间再慢慢补上最后项目里的最终选择细节。<br>参考资料：</p><blockquote><p><a href="http://www.asmedu.net/algorithm.jsp?index=46" target="_blank" rel="noopener">http://www.asmedu.net/algorithm.jsp?index=46</a><br><a href="https://www.cnblogs.com/zrhai/p/4071023.html" target="_blank" rel="noopener">https://www.cnblogs.com/zrhai/p/4071023.html</a><br><a href="https://blog.csdn.net/zgjllf1011/article/details/79297512" target="_blank" rel="noopener">https://blog.csdn.net/zgjllf1011/article/details/79297512</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>产品业务上最近有新人礼相关的需求，其中为了和公众号交互上的考虑需要使用类似团购“兑换码”的机制，于是在开发过程中就牵涉到如何生成大量随机且不唯一的兑换码的问题，同时还要考虑兑换码的验证等问题，虽然性能上暂时不需要考虑太多，毕竟小作坊注册的人不会很多，时间也紧迫，但兑换码的生成算法深入研究一下确实很有意思，比如今天看到有人说美团用到的<strong>“线性同余产生随机数”</strong>的算法，有时间再慢慢补上最后项目里的最终选择细节。<br>参考资料：</p><blockquote><p><a href="http://www.asmedu.net/algorithm.jsp?index=46" target="_blank" rel="noopener">http://www.asmedu.net/algorithm.jsp?index=46</a><br><a href="https://www.cnblogs.com/zrhai/p/4071023.html" target="_blank" rel="noopener">https://www.cnblogs.com/zrhai/p/4071023.html</a><br><a href="https://blog.csdn.net/MrTraum/article/details/88634903" target="_blank" rel="noopener">https://blog.csdn.net/MrTraum/article/details/88634903</a></p><blockquote><p><a href="https://blog.csdn.net/zgjllf1011/article/details/79297512" target="_blank" rel="noopener">https://blog.csdn.net/zgjllf1011/article/details/79297512</a></p></blockquote></blockquote>]]></content>
     
     <summary type="html">
     
@@ -150,7 +175,7 @@
     <published>2019-04-18T04:48:53.000Z</published>
     <updated>2019-04-18T07:10:32.041Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>最近偶然间在广播里听到哲哲的一首新歌，说新歌只是对自己而言的，毕竟是第一次听到，感觉很柔美，符合当下自己的品味。<br>于是进入老套路：<strong>搜歌-&gt;单曲循环-&gt;搜谱</strong><br>但貌似不是某人的菜，还说我老人了，可不是么，确实是跟哲哲一样老年人了 😹<br>Anyway I like it. 顺带把邓丽君的原版以及王菲的版本也都欣赏了一遍，感觉还是各有特色。</p>    <div id="aplayer-HBcuNdRt" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="562592169" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>最近偶然间在广播里听到哲哲的一首新歌，说新歌只是对自己而言的，毕竟是第一次听到，感觉很柔美，符合当下自己的品味。<br>于是进入老套路：<strong>搜歌-&gt;单曲循环-&gt;搜谱</strong><br>但貌似不是某人的菜，还说我老人了，可不是么，确实是跟哲哲一样老年人了 😹<br>Anyway I like it. 顺带把邓丽君的原版以及王菲的版本也都欣赏了一遍，感觉还是各有特色。</p>    <div id="aplayer-xHaTdpNq" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="562592169" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>]]></content>
     
     <summary type="html">
     
@@ -191,9 +216,9 @@
       <category term="随笔" scheme="http://shenweihui.cn/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="gossip" scheme="http://shenweihui.cn/tags/gossip/"/>
-    
       <category term="life" scheme="http://shenweihui.cn/tags/life/"/>
+    
+      <category term="gossip" scheme="http://shenweihui.cn/tags/gossip/"/>
     
   </entry>
   
